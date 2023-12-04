@@ -1,6 +1,7 @@
 package com.alexscode.teaching;
 
 import com.alexscode.teaching.solver.CanonicalTour;
+import com.alexscode.teaching.solver.GreedySolver;
 import com.alexscode.teaching.tsp.Instance;
 import com.alexscode.teaching.tsp.Objective;
 import com.alexscode.teaching.solver.TSPSolver;
@@ -12,7 +13,7 @@ public class Main {
 
         Objective obj = new Objective(f4_small);
 
-        TSPSolver solver = new CanonicalTour();
+        TSPSolver solver = new GreedySolver();
         Solution solution = new Solution(f4_small, solver.solve(f4_small), 42);
 
         System.out.println(solution);

@@ -9,6 +9,6 @@ import java.util.stream.IntStream;
 public class CanonicalTour implements TSPSolver{
     @Override
     public List<Integer> solve(Instance ist) {
-        return null; //TODO
+        return IntStream.range(0, ist.getSize()).boxed().collect(Collectors.toList());
     }
 }

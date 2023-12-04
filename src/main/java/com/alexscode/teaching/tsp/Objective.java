@@ -10,6 +10,10 @@ public class Objective {
     }
 
     public double distance(List<Integer> sequence){
-        return 0;
+        double d = 0;
+        for (int i = 0; i < sequence.size() - 1; i++) {
+            d += ist.distances[sequence.get(i)][sequence.get(i+1)];
+        }
+        return d + ist.distances[sequence.get(sequence.size() - 1)][sequence.get(0)];
     }
 }
